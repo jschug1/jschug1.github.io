@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta name="viewport" content="with=device-width, inital-scale=1.0">
+
+    <title> Jorin Schug </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body style="background-color:black;">
+
+    <div class="header">
+        
+        <nav>
+            <a href="index.html"></a>             
+            <div class="nav-right" id="navright">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="teaching.html">Teaching</a></li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jorin-schug-54b6171a5/" >LinkedIn</a></li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.github.com/jschug1"> GitHub </a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </nav>
+    <div class='id-photo'>
+        <img src='Images/IMG-1993.JPG'>
+    </div>
+    </div>
+    
+    <div class="text-box project-container">
+        
+        <h1> Projects </h1>
+        
+        <h3 style='text-align: left; text-decoration: none; text-color: #fff;'><a href="https://github.com/jschug1/Arxiv-Metadata"> ArXiV Metadata Analysis &nbsp; <i class="fa fa-external-link"></i></a>
+        </h3>
+               
+        <div class="project-summary">
+            <p> I worked on a quick project analyzing metadata from the ArXiv which is a website where researchers post preprints of their papers, primarily in math, physics, and computer science, but also in a smattering of a few other topics such as finance, quantitative biology, and more. From personal experience, I know that today, posting one's papers to the ArXiv is fairly ubiquitous in math and physics, this practice has only been in place since early 90s and become commonplace some years after that.  Hence the data is more complete for recent years. The metadata for all papers is available as a database on Kaggle and each entry contains listings to the paper's title, ID number, posting time, subject IDs, and more. <br><br>
+                
+            The subject IDs identify to the users the subject the paper is in, so for example 'math.CO' tags the paper as being in mathematics, and more specifically 'combinatorics'.  Most of the topics have IDs as clear as this example, but physics is broken up into multiple IDs depending on subfield.  However they can be recombined as part of data processing. Papers can be tagged with more than one subject ID if covers more than one subject.  I decided to play around with trends for words which appear in paper titles over time or by topic.<br><br>
+            
+            A question which I found interesting was "What buzzwords or subject IDs have had the biggest increase in popularity on the ArXiv over the last few decades?"  To make this a more rigorous question, we can measure the total number of words usage in paper titles or subject ID use per year.  Then we can come up with a quantitative metric by which to measure 'popularity'.<br><br>
+                
+            To collect the data, I gleaned word usage rates per year and per topic tag from the paper title data entries.  Then it was a matter of dividing the number of paper titles with appearances given by each word per year by the total number of papers for that year.  I ended up creating three dataframes to store the data.  One dataframe had rows corresponding to words appearing in titles, and columns corresponding to relative appearance rate per year.  I had another data frame where columns occured per topic.  Finally, I also gleaned relative number of subject ID usages per year to track popularity of certain subjects over time.  As mentioned, the ArXiv has papers which date back to the late 80s, but the data is quite incomplete until the 00s, so the first few years are ignored in our analysis. <br><br>
+                
+            Once these frames were set up, I needed a metric to measure popularity growth over time and sort the words and subject IDs by this metric.  I tried a couple different metrics and received different results.  The first was 'largest single year uptick in relative usage rate'.  While not a measure of overall popularity over the decades, hopefully it would see very spiky fads and new buzzwords or subjects. I also tried using the total change in appearance rate.  More and more papers are posted to the ArXiv over the years, so almost all words and subject IDs trend upward naturally, hopefully the most popular today have even higher upward trend.  While single year or global percentage increase in usage rate was something I considered, this did not weed out noise from low sample size, either in total number of papers in early years or in total usage rate.  Below are some graphs I generated based on the different metrics.<br><br></p>
+            
+            
+                <img class='image' src='Images/overall-increase.png' style='width: 75%; height: auto;'>
+            
+    
+            <p><br>Here is a usage graph of the 5 most words with the largest overall increase in appearances from 1994 to 2022.  Perhaps unsurprisingly, machine learning has seen the biggest growth in popularity out of all STEM subjects over the last 20ish years, and this is reflected in my analysis of the ArXiv metadata.  The buzzword 'learning' went from almost no appearances in paper titles to almost 15000 appearances in 2022, and that's just in titles.  Similarly, model and neural both increased as well as part of the same trend, but perhaps appear in less paper titles since they are more technical sounding to a broader audience.  The other two words, 'quantum' and 'via', are different stories all together.  The 'quantum' is up here since it is a staple of physics adjectives and received some increase within computer science and math from quantum computing and quantum <em>K</em>-theory and the like, to keep the trend from stagnating.  The word 'via' is a preposition in English, so perhaps more and more people are writing papers about the methods by which they did their research, perhaps like 'Proving Theorem blah blah via blah blah'.  This was a very surprising appearance to me.<br><br></p>
+            
+                <img class='image' src='Images/single-year-increase.png' style='width:75%; height: auto;'>
+            
+            
+            <p><br> I also took a look at the top 5 words with the single year largest usage rate increases, perhaps to find interesting fads or unusual behavior independent from total posts on the ArXiv trends.   Unfortunately, two of the words were due to early year noise, namely 'matrix' and 'states'.  The words 'learning' and 'deep' are presumably again part of the increased interest in machine learning in the past half a decade or so.  The growth since the early 2010s is remarkable.  Interestingly, 'learning' had a lower usage rate in 2022 than in 2021, perhaps indication of peaking of interest or simply the researchers opting for more specific words in titles.  But still, a whopping 8% of papers on the ArXiv had the word 'learning' in the title.<br><br>
+                
+            Actually, the reason I used this metric was to see if the buzzword 'covid-19' appeared, which it did.  Up from essentially 0% in 2019, over 1% of all papers posted on the ArXiv in 2020 had 'covid-19' in the title, which was enough to vault it to the top 5.  Removing all the pure mathematics and theoretical physics papers, 1% is quite high. <br><br> We note a couple of potential pitfalls of these two graphs in identifying trends for clarity.  Recall that not all papers are posted to the ArXiv, and I haven't established that many computer scientists didn't just start posting on the ArXiv in 2012, leading to an inorganic explosion of machine learning papers, for example.  Also, mentions of other buzzwords could lie in abstracts more likely since not all authors opt for dry academic titles, especially farther away from mathematics you go.  More analysis into this topic would be interesting! <br><br></p>
+            
+                <img src='Images/subject-id-usage.png'
+                     style='width:75%; height: auto;'>
+            
+            <p><br> I did also plot the relative usage of machine learning related subject IDs on the ArXiv.  You can see clear growth again since the late 2010s.  Interestingly the 'stat.ML' tag became less popular in use.  Perhaps the tag itself became unpopular in favor of 'cs.AI', or it indicates a move of machine learning to be considered as theoretical statistics to a more applied computer science field.  In any case, 'cs.LG', which is for machine learning, remains popular.  Click the title of this section to see the full code on github!
+            
+            
+
+                
+        </div>
+
+        <h3><a href="https://github.com/jschug1/Movie-Review-Generator">Movie Review Text Generator &nbsp; <i class="fa fa-external-link"></i></a></h3>
+        
+        <div class="project-summary">
+            <p> I decided to tackle putting together a basic text generator for my first project, and since there is a well-used database of IMDB movie reviews, I decided to use all the reviews as the corpus for generating text.<br><br>
+
+            I began by generating text manually without the use of a deep neural network.  The method is to construct a matrix keeping track of adjacent words. In particular, each row of the matrix correpsonds to a unique three word sequence somewhere in the corpus, punctuation potentially included as a single word.  Then each column corresponds to a unique single word within the corpus.  Finally each entry of the matrix corresponds to the number of the three word sequences for the row is followed by the single word for the column.  This matrix is quite sparse, so storage and operation may be simplified by sparse matrix packages.  Also, one can code the algorithm so that one may consider <em>k</em> adjacent words.<br><br>
+
+            To generate text, it is a matter of setting up Markov chain beginning with a seed phrase to generate new text.  Since the corpus consists of movie reviews, a good seed phrase might be "This movie is so...".  Then the algorithm programmed to pick a random word which follows the three word sequence "movie is so" in the corpus, append it to the text, and repeat.  The random choice is generated by a weighted probability given by the rows of the matrix, since some words follow "movie is so" more often than others.  The Markov chain can be programmed to stop after a certain amount of new words, or a certain amount of periods for slightly more of a natural text feeling.  Here is an example.<br><br>
+            
+            <em>This movie is so boring and lifeless film . There was nothing objectionable that I turned it off to watch reruns of this show . In this case , the only thing that doesn't ring true at times . The film reeks of production line planning . It seems almost like even it can't wait to see another of this ilk are constructed around one or two rare exceptions are awful with bad animation , and a shot stolen from David Lean's Oliver Twist , except this time they are allotted . Whether trying to sell his work to show not the same way , because by telling that , it is true that many criminals are even dumber than this , as usual in a Scorsese film , is definitely worth seeing .</em><br><br>
+
+            Not that bad considering we only used a bare bones approach, but not a lot of global sentences structure is generated here.  For that we require more than 3 adjacent words to affect the behavior of the model.  Slightly more sophisticated than a random weighted choice is using a DNN to determine the next word following a chain of words.  Of course, DNNs require numerical data, so each word or word phrase is associated with a token or series of tokens.  The DNN can be trained on data consisting of sequences of token corresponding to phrases of words in the corpus, and labels being tokens of words following the data entries.  This was a practice project, so I set up a very bare bones model consisting of a flattening layer, a bidirectional LSTM layer, and a single dense layer to output a new word.  The text generation works much the same as before, and can be iterated until a certain number of new words are generated, or a certain number of periods occur.  Here is an example generated by the simple model.<br><br>
+                
+            <em>"This movie is so bad but the movie is so good and the acting is very good of the film and the whole thing is a lot for a very low budget movie and the acting is so awful of the movie is a little mess of it s the most budget of this"</em><br><br>
+            
+            I only used about 400 reviews and 10 epochs for the sake of time, but this has slightly better structure, and would look a lot better given time and post-processing for punctuation.  Obviously a fancier model and more data are required since the review says the movie was 'bad' and then 'good' immediately.  For a proof of concept practice project, not too bad.  If you want, you can click the title of this section to check out the github.
+            <p>
+        </div>
+        
+        
+        
+        
+    </div>
+                
+
+</body>
+</html>

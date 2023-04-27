@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta name="viewport" content="with=device-width, inital-scale=1.0">
+
+    <title> Jorin Schug </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+
+    
+    <div class="header">
+        
+        <nav>
+            <a href="index.html"></a>             
+            <div class="nav-right" id="navright">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="teaching.html">Teaching</a></li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jorin-schug-54b6171a5/" >LinkedIn</a></li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.github.com/jschug1"> GitHub </a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </nav>
+    
+    </div>
+    
+
+
+    
+    <div class="text-box">
+        <h1> I'm Jorin Schug!</h1>
+        <h3 style='font-weight: normal; padding-bottom: 4.5em;'> I'm a Math PhD from the University of Minnesota.  You can get to know me and my work here. <br> Check out my computer programming projects or my past teaching materials.</h3>
+        <!--<a href="" class="hero-btn"> LinkedIn </a>-->
+        <!--<a href="" class="hero-btn"> github </a>-->
+        <div class='image'>
+            <img src='IMG-1993.JPG' style='width: 200px; height: auto;'>
+        </div>
+    </div>
+    
+
+
+
+<!--About-->
+    
+<!-- <section class="about">
+    <h1>About Me</h1>
+    <p>I love math. I love math. I love math. I love math.</p>
+    
+    <div class="row">
+        <div class="about-col">
+            <h3>Intermediate</h3>
+            <p> I'm a Math PhD from the University of Minnesota.  You can get to know me and my work here. <br> You can check out my past teaching materials, or my computer programming projects, <br> or any math I'm interested in right now in the blog. </p>
+        </div>
+        <div class="about-col">
+            <h3>Easy</h3>
+            <p> I'm a Math PhD from the University of Minnesota.  You can get to know me and my work here. <br> You can check out my past teaching materials, or my computer programming projects, <br> or any math I'm interested in right now in the blog. </p>
+        </div>
+        <div class="about-col">
+            <h3>Hard</h3>
+            <p> I'm a Math PhD from the University of Minnesota.  You can get to know me and my work here. <br> You can check out my past teaching materials, or my computer programming projects, <br> or any math I'm interested in right now in the blog. </p>
+        </div>
+    </div>
+    
+    
+</section> -->
+
+<!--TEACHING-->
+    
+<!-- <section class="teaching">
+
+    <h1> Past Teaching Materials </h1>
+    <h3> University of Minnesota </h3>
+    
+    <div class="row">
+        <div class="teaching-col">
+            <h4> Math 1031: College Algebra and Probability </h4>
+        </div>
+        <div class="teaching-col">
+            <h4> Math 4242: Applied Linear Algebra </h4>
+        </div>
+        <div class="teaching-col">
+            <h4> Math 1271: Calculus I </h4>
+        </div>
+    </div>
+    
+</section> -->
+    
+<!-- Contact -->
+
+<!-- <section class="contact">
+    
+    <a href="" class="hero-btn"> Contact Me </a>
+    
+</section> !-->
+    
+    
+<!--Javascript for Toggle Menu--> 
+<script>
+
+    var navLinks = document.getElementById("navLinks")
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-150px";
+    }
+    
+</script>
+    
+</body>
+</html>

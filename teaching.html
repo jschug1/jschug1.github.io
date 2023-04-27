@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta name="viewport" content="with=device-width, inital-scale=1.0">
+
+    <title> Jorin Schug </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body style="background-color:black;">
+
+    <div class="header">
+        <nav>
+            <a href="index.html"></a>             
+            <div class="nav-right" id="navright">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="teaching.html">Teaching</a></li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jorin-schug-54b6171a5/" >LinkedIn</a></li>
+                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.github.com/jschug1"> GitHub </a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </nav>
+    <div class='id-photo'>
+        <img src='IMG-1993.JPG'>
+    </div>
+    </div>
+    
+
+    
+    
+    <div class="text-box teaching-container">
+        <div class="teaching-title"> <h1> Teaching Materials <br>  University of Minnesota </h1> </div>
+        <!--<a href="" class="hero-btn"> LinkedIn </a>-->
+        <!--<a href="" class="hero-btn"> github </a>-->
+        <!--<div class="teaching-subtitle"> University of Minnesota </div>-->
+        <div class="class-btn" onclick="showFolder('Math1031')">  Math 1031 <br> College Algebra and Probability  </div>
+        <div class="class-btn" onclick="showFolder('Math2243')">  Math 2243 <br> CSE Differential Equations  </div>
+        <div class="class-btn" onclick="showFolder('Math2374')"> Math 2374 <br> CSE Multivariable Calculus </div>
+        <div class="class-btn" onclick="showFolder('Math3593H')"> Math 3593H <br> Honors Multivariable Calculus </div>
+        <div class="class-btn" onclick="showFolder('Math4242')"> Math 4242 <br> Applied Linear Algebra </div>
+    </div>
+    
+    <div class="class-folder" id='Math1031'>
+        <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;
+            <a href='challenge_problems.pdf' target='_blank'>
+                challenge_problems</a></h3>
+    </div>
+
+    
+    <div class="class-folder" id="Math2243">
+        <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;
+            <a href='final_exam_review.pdf' target='_blank'>
+               final_exam_review</a></h3>
+    </div>
+    
+    <div class="class-folder" id="Math2374">
+        <div class="class-subfolder" id="Math2374-2018" 
+             onclick="showFolder('Math2374-2018-contents')">
+            <h3><i class="fa fa-folder"></i>&nbsp;Math 2374 - 2018</h3>
+        </div>
+        <div class="class-subfolder" id="Math2374-2021" 
+             onclick="showFolder('Math2374-2021-contents')">
+            <h3><i class="fa fa-folder"></i>&nbsp;Math 2374 - 2021</h3>
+        </div>
+    </div>
+    
+    <div class="class-folder" id="Math2374-2018-contents">
+        <div class='back-btn' onclick="showFolder('Math2374')"><h3><i class="fa-sharp fa-solid fa-arrow-left"></i>&nbsp;Back</h3></div>
+        <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;
+            <a href='m2374_mid2_review.pdf' target='_blank'>m2374_mid2_review</a></h3>
+        <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;
+            <a href='m2374_mid3_review.pdf'
+               target='_blank'>m2374_mid3_review</a></h3>
+    </div>
+    
+    <div class="class-folder" id="Math2374-2021-contents">
+        <div class='back-btn' onclick="showFolder('Math2374')"><h3><i class="fa-sharp fa-solid fa-arrow-left"></i>&nbsp;Back</h3></div>
+        <div class="class-subfolder" id="Math2374-2021-Discussion" onclick="showFolder('Math2374-2021-Discussion-contents')">
+            <h3><i class="fa fa-folder"></i>&nbsp;Discussion Notes</h3>
+        </div>
+        <div class="class-subfolder" id="Math2374-2021-Worksheets" onclick="showFolder('Math2374-2021-Worksheets-contents')">
+            <h3><i class="fa fa-folder"></i>&nbsp;Worksheets</h3>
+        </div>
+    </div>
+    
+    <div class='class-folder' id='Math2374-2021-Discussion-contents'>
+        <div class='back-btn' onclick="showFolder('Math2374-2021-contents')"><h3><i class="fa-sharp fa-solid fa-arrow-left"></i>&nbsp;Back</h3></div>
+        <div class='folder-content'>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;
+                <a href='Discussion%201-26.pdf' target='_blank'>Discussion 1-26</a></h3>
+            
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;
+                <a href='Discussion%201-28.pdf' target='_blank'>Discussion 1-28</a></h3>
+            
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;
+                <a href='Discussion%202-2.pdf' target='_blank'>Discussion 2-2</a></h3>
+            
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;
+                <a href='Discussion%202-9.pdf' target='_blank'>Discussion 2-9</a></h3>
+            
+                        <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;
+                <a href='Discussion%202-16.pdf' target='_blank'>Discussion 2-16</a></h3>
+            
+                        <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;
+                <a href='Discussion%202-23.pdf' target='_blank'>Discussion 2-23</a></h3>
+            
+                        <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;
+                <a href='Discussion%203-2.pdf' target='_blank'>Discussion 3-2</a></h3>
+            
+                        <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;
+                <a href='Discussion%203-9.pdf' target='_blank'>Discussion 3-9</a></h3>
+            
+                        <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;
+                <a href='Discussion%203-11.pdf' target='_blank'>Discussion 3-11</a></h3>
+            
+                        <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;
+                <a href='Discussion%203-16.pdf' target='_blank'>Discussion 3-16</a></h3>
+            
+                        <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;
+                <a href='Discussion%203-23.pdf' target='_blank'>Discussion 3-23</a></h3>
+            
+                        <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;
+                <a href='Discussion%203-30.pdf' target='_blank'>Discussion 3-30</a></h3>
+            
+                                    <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;
+                <a href='Discussion%204-13.pdf' target='_blank'>Discussion 4-13</a></h3>
+                                    <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;
+                <a href='Discussion%204-20.pdf' target='_blank'>Discussion 4-20</a></h3>
+                                    <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;
+                <a href='Discussion%204-27.pdf' target='_blank'>Discussion 4-27</a></h3>
+                                    <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;
+                <a href='Discussion%204-29.pdf' target='_blank'>Discussion 4-29</a></h3>
+            
+            
+        </div>
+    </div>
+    
+    <div class='class-folder' id='Math2374-2021-Worksheets-contents'>
+        <div class='back-btn' onclick="showFolder('Math2374-2021-contents')"><h3><i class="fa-sharp fa-solid fa-arrow-left"></i>&nbsp;Back</h3></div>
+        <div class='folder-content'>
+            
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='worksheet_1_26.pdf' target='_blank'>Worksheet 1-26</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='worksheet_1_28.pdf' target='_blank'>Worksheet 1-28</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='worksheet_2_2.pdf' target='_blank'>Worksheet 2-2</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='worksheet_2_4.pdf' target='_blank'>Worksheet 2-4</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='worksheet_2_9.pdf' target='_blank'>Worksheet 2-9</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='worksheet_2_11.pdf' target='_blank'>Worksheet 2-11</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='worksheet_2_16.pdf' target='_blank'>Worksheet 2-16</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='worksheet_2_18.pdf' target='_blank'>Worksheet 2-18</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='worksheet_2_23.pdf' target='_blank'>Worksheet 2-23</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='worksheet_2_25.pdf' target='_blank'>Worksheet 2-25</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='worksheet_3_2.pdf' target='_blank'>Worksheet 3-2</a></h3>
+
+            
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='worksheet_3_4.pdf' target='_blank'>Worksheet 3-4</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='worksheet_3_9.pdf' target='_blank'>Worksheet 3-9</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='worksheet_3_11.pdf' target='_blank'>Worksheet 3-11</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='worksheet_3_16.pdf' target='_blank'>Worksheet 3-16</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='worksheet_3_18.pdf' target='_blank'>Worksheet 3-18</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='worksheet_3_23.pdf' target='_blank'>Worksheet 3-23</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='worksheet_3_25.pdf' target='_blank'>Worksheet 3-25</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='worksheet_3_30.pdf' target='_blank'>Worksheet 3-30</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='worksheet_4_1.pdf' target='_blank'>Worksheet 4-1</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='worksheet_4_13.pdf' target='_blank'>Worksheet 4-13</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='worksheet_4_15.pdf' target='_blank'>Worksheet 4-15</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='worksheet_4_20.pdf' target='_blank'>Worksheet 4-20</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='worksheet_4_22.pdf' target='_blank'>Worksheet 4-22</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='worksheet_4_27.pdf' target='_blank'>Worksheet 4-27</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='worksheet_4_29.pdf' target='_blank'>Worksheet 4-29</a></h3>
+
+        </div>
+    </div>
+    
+    <div class='class-folder' id='Math3593H'>
+        <div class='folder-content'>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='hw_1_sol.pdf' target='_blank'> Homework 1 Sols</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='hw_2_sol.pdf' target='_blank'> Homework 2 Sols</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='hw_3_sol.pdf' target='_blank'> Homework 3 Sols</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='hw_4_sol.pdf' target='_blank'> Homework 4 Sols</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='hw_5_sol.pdf' target='_blank'> Homework 5 Sols</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='hw_6_sol.pdf' target='_blank'> Homework 6 Sols</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='hw_7_sol.pdf' target='_blank'> Homework 7 Sols</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='hw_8_sol.pdf' target='_blank'> Homework 8 Sols</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='hw_9_sol.pdf' target='_blank'> Homework 9 Sols</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='hw_10_sol.pdf' target='_blank'> Homework 10 Sols</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='hw_11_sol.pdf' target='_blank'> Homework 11 Sols</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='hw_12_sol.pdf' target='_blank'> Homework 12 Sols</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='hw_13_sol.pdf' target='_blank'> Homework 13 Sols</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='hw_14_sol.pdf' target='_blank'> Homework 14 Sols</a></h3>
+
+        </div>
+    </div>
+    
+    <div class='class-folder' id='Math4242'>
+        <div class='class-subfolder'
+             onclick="showFolder('Math4242-Summer-2020-contents')">
+            <h3><i class="fa fa-folder"></i>&nbsp;Math 4242 Summer 2020</h3>
+        </div>
+        <div class='class-subfolder' id='Math4242-Fall-2020'
+             onclick="showFolder('Math4242-Fall-2020-contents')">
+            <h3><i class="fa fa-folder"></i>&nbsp;Math 4242 Fall 2020</h3>
+        </div>
+    </div>
+    
+    
+    <div class='class-folder' id='Math4242-Summer-2020-contents'>
+        <div class='back-btn' onclick="showFolder('Math4242')">
+            <h3><i class="fa-sharp fa-solid fa-arrow-left"></i>&nbsp;Back</h3></div>
+        <div class='class-subfolder'
+             onclick="showFolder('Math4242-Summer-2020-stuff')">
+            <h3><i class="fa fa-folder"></i>&nbsp;Exams and Homework</h3>
+        </div>
+        <div class='class-subfolder'
+             onclick="showFolder('Math4242-Summer-2020-lectures')">
+            <h3><i class="fa fa-folder"></i>&nbsp;Lectures Notes</h3>
+        </div>
+    </div>
+    
+    <div class='class-folder' id='Math4242-Summer-2020-stuff'>
+        <div class='back-btn' onclick="showFolder('Math4242-Summer-2020-contents')">
+            <h3><i class="fa-sharp fa-solid fa-arrow-left"></i>&nbsp;Back</h3></div>
+        <div class='folder-content'>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;
+                <a href="Exam%201%20Review%20Sheet.pdf" target="_blank">
+                   Exam1 ReviewSheet</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;
+                <a href="Exam%202%20Review%20Sheet.pdf" target="_blank">Exam2 ReviewSheet</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href="Exam%203%20Review%20Sheet.pdf" target="_blank">Exam3 ReviewSheet</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href="exam1_study_guide.pdf" target="_blank">Exam1 StudyGuide</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href="exam1_study_guide_solutions.pdf" target="_blank">Exam1 StudyGuideSols</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href="Exam_2_Practice.pdf" target="_blank">Exam2 Practice</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href="Exam_2_Practice_Solutions.pdf" target="_blank">Exam2 PracticeSols</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href="Exam_2_Study_Guide.pdf" target="_blank">Exam2 StudyGuide</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href="Final_Exam_Review_Problems.pdf" target="_blank">FinalExam ReviewProblems</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href="Final_Exam_Review_Problems_solutions.pdf" target="_blank">FinalExam ReviewProbsSols</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href="Final_Exam_Study_Guide%20(1).pdf" target="_blank">FinalExam StudyGuide</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href="Practice_Problems_6_9.pdf" target="_blank">Practice Probs 6-9</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href="Practice_Problems_6_11%20(1).pdf" target="_blank">Practice Probs 6-11</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href="Practice_Problems_6_16.pdf" target="_blank">Practice Probs 6-16</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href="Practice_Problems_6_23.pdf" target="_blank">Practice Probs 6-23</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href="Homework_1.pdf" target="_blank">Homework 1</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href="Homework_2.pdf" target="_blank">Homework 2</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href="Homework_3.pdf" target="_blank">Homework 3</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href="Homework_4.pdf" target="_blank">Homework 4</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href="Homework_5.pdf" target="_blank">Homework 5</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href="Homework_6.pdf" target="_blank">Homework 6</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href="Homework_7.pdf" target="_blank">Homework 7</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href="Homework_8.pdf" target="_blank">Homework 8</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href="Homework_9.pdf" target="_blank">Homework 9</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href="Homework_10.pdf" target="_blank">Homework 10</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href="Homework_11.pdf" target="_blank">Homework 11</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href="Homework_12.pdf" target="_blank">Homework 12</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href="Homework_13.pdf" target="_blank">Homework 13</a></h3>
+        </div>
+    </div>
+    
+    <div class='class-folder' id='Math4242-Summer-2020-lectures'>
+        <div class='back-btn' onclick="showFolder('Math4242-Summer-2020-contents')">
+            <h3><i class="fa-sharp fa-solid fa-arrow-left"></i>&nbsp;Back</h3></div>
+        <div class='folder-content'>
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Math%204242%206-8.pdf' target='_blank'>Lecture Notes 6-8</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Math%204242%206-9.pdf' target='_blank'>Lecture Notes 6-9</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Math%204242%206-10.pdf' target='_blank'>Lecture Notes 6-10</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Math%204242%206-11.pdf' target='_blank'>Lecture Notes 6-11</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Math%204242%206-12.pdf' target='_blank'>Lecture Notes 6-12</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Math%204242%206-15.pdf' target='_blank'>Lecture Notes 6-15</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Math%204242%206-16.pdf' target='_blank'>Lecture Notes 6-16</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Math%204242%206-17.pdf' target='_blank'>Lecture Notes 6-17</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Math%204242%206-18.pdf' target='_blank'>Lecture Notes 6-18</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Math%204242%206-22.pdf' target='_blank'>Lecture Notes 6-22</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Math%204242%206-23.pdf' target='_blank'>Lecture Notes 6-23</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Math%204242%206-24.pdf' target='_blank'>Lecture Notes 6-24</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Math%204242%206-25.pdf' target='_blank'>Lecture Notes 6-25</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Math%204242%206-26.pdf' target='_blank'>Lecture Notes 6-26</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Math%204242%206-29.pdf' target='_blank'>Lecture Notes 6-29</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Math%204242%206-30.pdf' target='_blank'>Lecture Notes 6-30</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Math%204242%207-1.pdf' target='_blank'>Lecture Notes 7-1</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Math%204242%207-2.pdf' target='_blank'>Lecture Notes 7-2</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Math%204242%207-3.pdf' target='_blank'>Lecture Notes 7-3</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Math%204242%207-6.pdf' target='_blank'>Lecture Notes 7-6</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Math%204242%207-7.pdf' target='_blank'>Lecture Notes 7-7</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Math%204242%207-8.pdf' target='_blank'>Lecture Notes 7-8</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Math%204242%207-9.pdf' target='_blank'>Lecture Notes 7-9</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Math%204242%207-13.pdf' target='_blank'>Lecture Notes 7-13</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Math%204242%207-14.pdf' target='_blank'>Lecture Notes 7-14</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Math%204242%207-15.pdf' target='_blank'>Lecture Notes 7-15</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Math%204242%207-16.pdf' target='_blank'>Lecture Notes 7-16</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Math%204242%207-20.pdf' target='_blank'>Lecture Notes 7-20</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Math%204242%207-21.pdf' target='_blank'>Lecture Notes 7-21</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Math%204242%207-22.pdf' target='_blank'>Lecture Notes 7-22</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Math%204242%207-23.pdf' target='_blank'>Lecture Notes 7-23</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Math%204242%207-24.pdf' target='_blank'>Lecture Notes 7-24</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Math%204242%207-27.pdf' target='_blank'>Lecture Notes 7-27</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Math%204242%207-28.pdf' target='_blank'>Lecture Notes 7-28</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Math%204242%207-29.pdf' target='_blank'>Lecture Notes 7-29</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Math%204242%207-30.pdf' target='_blank'>Lecture Notes 7-30</a></h3>
+
+        </div>
+    </div>
+    
+    <div class='class-folder' id='Math4242-Fall-2020-contents'>
+        <div class='back-btn' onclick="showFolder('Math4242')">
+            <h3><i class="fa-sharp fa-solid fa-arrow-left"></i>&nbsp;Back</h3></div>
+        <div class='class-subfolder'
+             onclick="showFolder('Math4242-Fall-2020-stuff')">
+            <h3><i class="fa fa-folder"></i>&nbsp;Exams and Homework</h3>
+        </div>
+        <div class='class-subfolder'
+             onclick="showFolder('Math4242-Fall-2020-lectures')">
+            <h3><i class="fa fa-folder"></i>&nbsp;Lectures Notes</h3>
+        </div>
+    </div>
+    
+    <div class='class-folder' id='Math4242-Fall-2020-stuff'>
+        <div class='back-btn' onclick="showFolder('Math4242-Fall-2020-contents')">
+            <h3><i class="fa-sharp fa-solid fa-arrow-left"></i>&nbsp;Back</h3></div>
+        <div class='folder-content'>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;
+                <a href='fall2020-exam1_study_guide.pdf' target='_blank'>Exam1 StudyGuide</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href='fall2020-exam1_study_guide_solutions.pdf' target='_blank'>Exam1 StudyGuide Solutions</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href='fall2020-Exam_2_study_guide.pdf' target='_blank'>Exam2 StudyGuide</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href='final_exam_practice_solutions_complete.pdf' target='_blank'>FinalExam PracticeSols</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href='final_exam_study_guide.pdf' target='_blank'>FinalExam StudyGuide</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href='practice_final_exam.pdf' target='_blank'>Practice FinalExam</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href='Practice%20Final%20Exam%20Solution.pdf' target='_blank'>Practice FinalExam Solutions</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href='fall2020-homework_1.pdf' target='_blank'>Homework 1</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href='fall2020-homework_2.pdf' target='_blank'>Homework 2</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href='fall2020-homework_3.pdf' target='_blank'>Homework 3</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href='fall2020-homework_4.pdf' target='_blank'>Homework 4</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href='fall2020-homework_5.pdf' target='_blank'>Homework 5</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href='fall2020-homework_6.pdf' target='_blank'>Homework 6</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href='fall2020-homework_7.pdf' target='_blank'>Homework 7</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href='fall2020-homework_8.pdf' target='_blank'>Homework 8</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href='fall2020-homework_9.pdf' target='_blank'>Homework 9</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href='fall2020-homework_10.pdf' target='_blank'>Homework 10</a></h3>
+            <h3><i class="fa-solid fa-file-pdf"></i>&nbsp;<a href='fall2020-homework_11.pdf' target='_blank'>Homework 11</a></h3>
+        </div>
+    </div>
+    
+    <div class='class-folder' id='Math4242-Fall-2020-lectures'>
+        <div class='back-btn' onclick="showFolder('Math4242-Fall-2020-contents')">
+            <h3><i class="fa-sharp fa-solid fa-arrow-left"></i>&nbsp;Back</h3></div>
+        <div class='folder-content'>
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%209-9.pdf' target='_blank'>Lecture Notes 9-9</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%209-11.pdf' target='_blank'>Lecture Notes 9-11</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%209-14.pdf' target='_blank'>Lecture Notes 9-14</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%209-16.pdf' target='_blank'>Lecture Notes 9-16</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%209-18.pdf' target='_blank'>Lecture Notes 9-18</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%209-21.pdf' target='_blank'>Lecture Notes 9-21</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%209-23.pdf' target='_blank'>Lecture Notes 9-23</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%209-25.pdf' target='_blank'>Lecture Notes 9-25</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%209-28.pdf' target='_blank'>Lecture Notes 9-28</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%209-30.pdf' target='_blank'>Lecture Notes 9-30</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%2010-2.pdf' target='_blank'>Lecture Notes 10-2</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%2010-5.pdf' target='_blank'>Lecture Notes 10-5</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%2010-7.pdf' target='_blank'>Lecture Notes 10-7</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%2010-12.pdf' target='_blank'>Lecture Notes 10-12</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%2010-14.pdf' target='_blank'>Lecture Notes 10-14</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%2010-16.pdf' target='_blank'>Lecture Notes 10-16</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%2010-19.pdf' target='_blank'>Lecture Notes 10-19</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%2010-21.pdf' target='_blank'>Lecture Notes 10-21</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%2010-23.pdf' target='_blank'>Lecture Notes 10-23</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%2010-26.pdf' target='_blank'>Lecture Notes 10-26</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%2010-28.pdf' target='_blank'>Lecture Notes 10-28</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%2010-30.pdf' target='_blank'>Lecture Notes 10-30</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%2011-2.pdf' target='_blank'>Lecture Notes 11-2</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%2011-4.pdf' target='_blank'>Lecture Notes 11-4</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%2011-6.pdf' target='_blank'>Lecture Notes 11-6</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%2011-9.pdf' target='_blank'>Lecture Notes 11-9</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%2011-11.pdf' target='_blank'>Lecture Notes 11-11</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%2011-16.pdf' target='_blank'>Lecture Notes 11-16</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%2011-18.pdf' target='_blank'>Lecture Notes 11-18</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%2011-20.pdf' target='_blank'>Lecture Notes 11-20</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%2011-23.pdf' target='_blank'>Lecture Notes 11-23</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%2011-25.pdf' target='_blank'>Lecture Notes 11-25</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%2011-30.pdf' target='_blank'>Lecture Notes 11-30</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%2012-2.pdf' target='_blank'>Lecture Notes 12-2</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%2012-4.pdf' target='_blank'>Lecture Notes 12-4</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%2012-7.pdf' target='_blank'>Lecture Notes 12-7</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%2012-9.pdf' target='_blank'>Lecture Notes 12-9</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%2012-11.pdf' target='_blank'>Lecture Notes 12-11</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%2012-14.pdf' target='_blank'>Lecture Notes 12-14</a></h3>
+
+            <h3><i class='fa-solid fa-file-pdf'></i>&nbsp;<a href='Lecture%20Notes%2012-16.pdf' target='_blank'>Lecture Notes 12-16</a></h3>
+
+        </div>
+    </div>
+    
+    
+<script>
+    
+    function showFolder(idName){
+        
+        var divsToHide = document.getElementsByClassName("class-shell");
+        for(var i = 0; i < divsToHide.length; i++){
+        divsToHide[i].style.display = "none";
+        }
+        var divsToHide = document.getElementsByClassName("class-folder");
+        for(var i = 0; i < divsToHide.length; i++){
+        divsToHide[i].style.display = "none";
+        }
+        
+        var x = document.getElementById(idName);
+        if (window.innerWidth >= 700) {
+            x.style.display = "grid";
+        }
+        else {
+            x.style.display = "block";
+            x.style.paddingRight = '1em';
+            x.style.paddingLeft = '1em';
+        }
+            
+    } 
+    
+</script>
+    
+    
+    
+    
+    
+</body>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</html>
