@@ -363,13 +363,17 @@ h3{
 
 .contact-table{
     width: 40%;
-    display: inline-block;
+    display: block;
     vertical-align: top;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 .contact-info{
     text-align: left;
     padding-top: 1em;
+    text-align: center;
 }
 .contact-info p{
     color: #fff;
